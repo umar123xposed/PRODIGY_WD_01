@@ -1,0 +1,846 @@
+:root{
+    --black: rgb(5, 0, 26);
+    --blue: rgb(56, 149, 255);
+    --white: #F0F0F0;
+    --orange: #E5D283;
+    --para: #032d5c;
+    --box: #0f1124f1;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: var(--black);
+    color: var(--white);
+    
+ 
+font-family: 'Play', sans-serif;
+    
+
+}
+
+.center{
+    text-align: center;
+}
+/* navbar and upper part starts here */
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    border-radius: 55px;    
+    margin: 0 auto;
+    width: 80vw;
+    height: 75px;
+    position: sticky;
+    top: 10px;
+    z-index: 2;
+   
+}
+.navbar::before{
+    content: "";
+    background-color:var(--box);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    box-shadow: 3px 3px 3px 0px rgb(2, 2, 2);
+    margin: 0 auto;
+    border-radius: 55px;
+}
+
+
+
+.navbar #logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    
+}
+#logo a{
+    font-family: 'Audiowide', cursive;
+    font-weight: bolder;
+    text-decoration: none;
+    color: var(--blue);
+    font-size: larger;
+    text-shadow: 3px 3px 4px var(--black);
+    
+    
+    
+}
+.navbar img{
+    height: 40px;
+    width: 80px;
+}
+
+.navbar ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    width: 80%;
+}
+.navbar ul li{
+    list-style: none;
+    
+   
+    margin: 10px;
+    
+
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: var(--white);
+    transition: color 0.7s ease;
+    
+}
+.navbar ul li a:hover{
+    color: var(--orange);
+    
+}
+.navbar #toggle-menu{
+    border-style: none;
+    background: none;
+    display: none;
+    cursor: pointer;
+    
+}
+#toggle-menu svg{
+   fill: var(--blue);
+   width: 30px;
+   height: 30px;
+    
+}
+#toggle-menu svg:hover{
+    fill: var(--orange);
+}
+.dropdown{
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 49px;
+    width: 100%;
+    height: 0;
+    background-color: var(--box);
+    box-shadow: 3px 3px 3px 0px rgb(2, 2, 2);;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    transition: height .8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    
+
+}
+.dropdown li{
+    font-weight: 600;
+
+    list-style: none;
+    padding: 18px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.7s ease;
+    
+}
+
+.dropdown a{
+    
+    text-decoration: none;
+    color: var(--white);
+    transition: all 0.7s ease;
+}
+.dropdown a:hover{  
+    color: var(--orange);
+    font-size: larger;
+       
+}
+
+.dropdown.open{
+    height: 240px;
+}
+
+#box{
+    display: flex;
+    width: 80vw;
+    margin: 0 auto;
+    
+
+}
+#box .main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 273px;
+    margin: 17px;
+    border-radius: 20px;
+    padding: 9px 45px;
+    background-color: var(--box);
+    box-shadow:3px 3px 3px 0px rgb(2, 2, 2);;
+}
+.main > h2{
+    color: var(--white);
+
+}
+.main p{
+    color: rgb(118, 118, 118);
+    
+
+}
+    
+
+.circle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    background-color: var(--blue);
+}
+
+#up>h1, #up>p{
+    
+    padding: 10px 383px
+}
+#up>h1{
+    color: var(--orange);
+    font-size: 2.3rem;
+}
+#up::before{
+    content: "";
+    background: url("/images/back.jpg") no-repeat center center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    opacity: 0.6;
+}
+
+/* navbar and upper part ends here */
+/* middle secton of left right picture starts her */
+#id2{
+    display: flex;
+    width:80vw;
+    margin: 0 auto;
+    
+}
+#id2 div{
+    width: 100%;
+    padding: 85px;
+    padding-bottom: 0;
+}
+
+
+#id2 .section-title {
+    margin-left: 90px;
+    padding: 83px;
+}
+
+#id3{
+    display: flex;
+    width:80vw;
+    margin: 0 auto;
+}
+#id3 div{
+    width: 100%;
+    padding: 85px;
+}
+#id3 .section-title {
+    margin-right: 90px;
+    padding: 83px;
+}
+.section-title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.section-title h2{
+    color: var(--orange);
+    font-weight: bolder;
+    margin-bottom:30px;
+    font-size: 24px;
+    padding: 0;
+}
+.section-title p{
+    letter-spacing: 1px;
+    padding: 0;
+    color: var(--white);
+}
+.pic{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* middle section of left right picture ends here */
+
+
+/* price section starts here */
+#down{
+    position: relative;
+}
+#price-flex{
+    display: flex;
+    width: 80vw;
+    margin: 0 auto;
+}
+#down h1{
+    color: var(--para);
+    font-size: 2.3rem;
+}
+#downheading>h1{
+    color: var(--orange);
+}
+#downheading>h1, #downheading>p{
+    padding: 10px 383px;
+    
+}
+.pricebox{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 368px;
+    margin: 17px;
+    border-radius: 20px;
+    padding: 9px 45px;
+    background-color: var(--box);
+    box-shadow:3px 3px 3px 0px rgb(2, 2, 2);;
+
+}
+.pricebox h3{
+    color: var(--white);
+    margin-top: -16px;
+}
+
+
+.price{
+    
+    width: 220px;
+    height: 78px;
+    background-color: var(--para);
+    border-radius: 16px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.price h4, .price p{
+    margin: 0;
+    color: var(--orange)
+    
+}
+.price h4{
+    font-size: 35px;
+}
+.price p{
+    letter-spacing: 2px;
+    color: white important;
+    
+}
+.pricebox>p{
+    text-align: center;
+    margin: 3px auto;
+    color: rgb(118, 118, 118);
+}
+
+.pricebox .btn{
+    margin-top: 20px;
+    border-style: none;
+    color: white;
+    background-color: var(--blue);
+    width: 150px;
+    height: 40px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    letter-spacing: 1px;
+    transition: all 0.7s ease;
+}
+.pricebox .btn:hover{
+    transform: scaleY(1.15);
+    background-color: var(--orange);
+    color: black
+}
+
+
+
+/* price section ends here */
+
+
+
+#clients{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 300px;
+
+}
+#clients div{
+    font-family: 'Martel', serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    transition: transform 0.3s ease-in;
+}
+#clients>div>h2{
+    font-size: 2.3rem;
+    margin-bottom: 0;
+    color: white;
+    letter-spacing: 4px;
+    font-weight: lighter;
+}
+#clients>div>p{
+    letter-spacing: 1.5px;
+    
+    color: white;
+    letter-spacing: 3px;
+}
+#clients div:hover{
+    transform: translateY(-12px);
+}
+
+#clients::before{
+    content: "";
+    /* background: url(/images/background1.jpg) no-repeat center center/cover; */
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.75;
+
+}
+
+/* footer starts here */
+#footermain {
+    position: relative;
+    margin-top: 100px;
+}
+#footermain>h1{
+    color: var(--orange);
+}
+#footermain>p{
+    color: var(--white)
+}
+#form{
+    display: flex;
+    
+    width: 80vw;
+    margin: 0 auto;
+    
+}
+#formleft{
+    
+    width: 33%;
+
+}
+#formleft>h2, #formleft>p{
+    margin: 10px 0;
+    padding: 21px 20px;
+}
+#formleft h2{
+    color: var(--orange);
+}
+#formleft p{
+    color: var(--white);
+}
+#formright{
+    width: 100%;
+}
+#formright .name{
+    width: 42%;
+    margin: 46px 9px;
+    height: 3em;
+    border-radius: 14px;
+    border-style: none;
+    padding: 0;
+    font-size: 1rem;
+    margin-left: 45px;
+    background-color: var(--white);
+    box-shadow: 3px 3px 3px 0px rgb(2, 2, 2);;
+}
+#formright .name:focus-visible{
+    border: 3px solid rgb(56, 56, 255);
+    
+}
+
+#formright #textarea{
+    display: block;
+    border-radius: 20px;
+    margin-left: 45px;
+    width: 91%;
+    font-size: 1rem;
+    height: 8em;
+    background-color: var(--white);
+    border-style: none;
+    box-shadow: 3px 3px 3px 0px rgb(2, 2, 2);;
+}
+#formright #textarea:focus-visible{
+    border: 3px solid rgb(56, 56, 255);
+    
+}
+#formright .btn{
+    margin-left: 45px;
+    margin-top: 39px;
+    border-style: none;
+    color: white;
+    background-color: var(--blue);
+    width: 150px;
+    height: 40px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    letter-spacing: 1px;
+    transition: all 0.7s ease;
+
+}
+#formright .btn:hover{
+    transform: scaleY(1.15);
+    background-color: var(--orange);
+    color: var(--black);
+
+}
+#footermain::before{
+    content: "";
+    background: url("/images/back1.jpg")no-repeat center center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    opacity: 0.4;
+
+}
+
+
+#social{
+    
+    
+    background-color: var(--box);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+}
+#social > ul{
+    display: flex;
+    margin-top: 25px;
+margin-bottom: 0px;
+}
+
+.socialflex{
+    
+   
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    margin: 0 15px;
+}
+.socialflex svg{
+    fill: white;
+    height:25px;
+    width: 25px;
+    transition: fill 0.7s ease;
+}
+.socialflex svg:hover{
+    fill: var(--blue);
+    
+}
+#social #copy{
+   margin-top: -25px;
+}
+/* footer ends here */
+@media  (min-width:801px) and (max-width:1130px) {
+    /* navigation starts here */
+
+
+.navbar>ul li{
+    font-size: 14px;
+    margin-left: 0px;
+}
+    
+
+
+#up>h1 , #up>p{
+    padding: 0px 74px;
+}
+
+
+
+
+/* /* middle section header */
+#box{
+    
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#box .main{
+    width: 45%;
+    margin: 12px;
+}
+
+#id2{
+    flex-direction: column;
+    align-items: center;
+    
+}
+#id2 .section-title {
+    margin: 0 auto;
+    padding: 0px;
+}
+
+#id3{
+    flex-direction: column;
+    align-items: center;
+}
+#id3 .section-title {
+    margin: 0 auto;
+    padding: 0px;
+}
+
+
+
+
+
+/* price section header */
+#price-flex{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.pricebox{
+    width: 45%;
+    margin: 12px;
+}
+#downheading{
+    padding: 10px 10px;
+}
+#downheading>h1, #downheading>p{
+    padding: 0px 74px;
+}
+#down::before{
+    
+    height: 1530px;
+}
+
+
+
+
+/* clients header */
+#clients{
+    flex-wrap: wrap;
+}
+#clients div{
+    margin: 0 60px;
+    margin-top: 50px;
+    margin-bottom: 0;
+}
+#clients::before{
+    height: 280px;
+}
+
+
+#footermain h2, #footermain p{
+    padding: 0px 74px;
+}
+#form{
+    flex-direction: column;
+    
+}
+#formleft{
+    width: 100%;
+}
+
+#formleft h2, #formleft p{
+    
+    margin: 10px 0px;
+    padding: 8px 0px;
+}
+#formright{
+    width: 100%;
+}
+#formright .name, #textarea{
+    width: 100%;
+    margin: 10px 0;
+}
+#formright #textarea{
+    margin: 10px 0;
+    width: 100%;
+}
+#formright .btn{
+    margin: 20px 124px;
+
+}
+#footermain::before{
+    height: 810px;
+    top: -20px;
+}
+
+    
+}
+
+@media (max-width:800px) {
+    .navbar #logo{
+        margin-left: 45px;
+    }
+    .navbar>ul li{
+        font-size: 14px;
+        margin-left: 0px;
+    }
+
+        
+    
+    #up::before{
+        height: 600px;
+    }
+    #up>h1 , #up>p{
+        padding: 0px 74px;
+    }
+    
+    
+    
+    
+    /* /* middle section header */
+    #box{
+        
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    #box .main{
+        width: 45%;
+        margin: 12px;
+    }
+    
+    #id2{
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    #id2 .section-title {
+        margin: 0 auto;
+        padding: 0px;
+    }
+    
+    #id3{
+        flex-direction: column;
+        align-items: center;
+    }
+    #id3 .section-title {
+        margin: 0 auto;
+        padding: 0px;
+    }
+    
+    
+    
+    
+    
+    /* price section header */
+    #price-flex{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .pricebox{
+        width: 45%;
+        margin: 12px;
+    }
+    #downheading{
+        padding: 10px 10px;
+    }
+    #downheading>h1, #downheading>p{
+        padding: 0px 74px;
+    }
+    #down::before{
+        
+        height: 1530px;
+    }
+    
+    
+    
+    
+    /* clients header */
+    #clients{
+        flex-wrap: wrap;
+    }
+    #clients div{
+        margin: 0 45px;
+        margin-top: 15px;
+        margin-bottom: 0;
+    }
+    #clients::before{
+        height: 280px;
+    }
+
+
+    #footermain h2, #footermain p{
+        padding: 0px 74px;
+    }
+    #form{
+        flex-direction: column;
+        
+    }
+    #formleft{
+        width: 100%;
+    }
+    
+    #formleft h2, #formleft p{
+        
+        margin: 10px 0px;
+        padding: 8px 0px;
+    }
+    #formright{
+        width: 100%;
+    }
+    #formright .name, #textarea{
+        width: 100%;
+        margin: 10px 0;
+    }
+    #formright #textarea{
+        margin: 10px 0;
+        width: 100%;
+    }
+    #formright .btn{
+        margin: 20px 124px;
+
+    }
+    #footermain::before{
+        height: 810px;
+        top: -20px;
+    }
+
+    .navbar ul{
+        display: none;
+    } 
+    
+
+.navbar #toggle-menu{
+    display: block;
+    padding-right: 50px;
+    
+}
+
+
+.dropdown{
+    display: block;
+}
+.dropdown.open li{
+    display: flex;
+}
+}
+ 
