@@ -18,6 +18,8 @@ font-family: 'Play', sans-serif;
 
 }
 
+
+
 .center{
     text-align: center;
 }
@@ -274,6 +276,17 @@ font-family: 'Play', sans-serif;
     justify-content: center;
     align-items: center;
 }
+/* for animation of this section */
+.hidden{ 
+    opacity: 0;
+    transform: translate(-100%);
+    transition: all 1s;
+}
+.show{
+    opacity: 1;
+    transform: translateX(0);
+    
+}
 /* middle section of left right picture ends here */
 
 
@@ -368,6 +381,25 @@ font-family: 'Play', sans-serif;
     transform: scaleY(1.15);
     background-color: var(--orange);
     color: black
+}
+.pricebox.anime:nth-child(2) {
+    transition-delay: 200ms;
+}
+
+.pricebox.anime:nth-child(3) {
+    transition-delay: 400ms;
+}
+
+.anime{
+    opacity: 0;
+    filter: blur(3px);
+    transform: translateY(150px);
+    transition: all 1s;
+}
+.move{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
 }
 
 
@@ -519,7 +551,7 @@ font-family: 'Play', sans-serif;
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100vh;
+    height: 653px;
     z-index: -1;
     opacity: 0.4;
 
@@ -687,8 +719,8 @@ margin-bottom: 0px;
 
 }
 #footermain::before{
-    height: 810px;
-    top: -20px;
+    height: 633px;
+    
 }
 
     
@@ -820,8 +852,8 @@ margin-bottom: 0px;
 
     }
     #footermain::before{
-        height: 810px;
-        top: -20px;
+        height: 690px;
+        
     }
 
     .navbar ul{
